@@ -5,51 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Lords</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
             background-color: #0a0a0a;
             color: white;
             text-align: center;
+            overflow-x: hidden;
         }
         header {
+            background: linear-gradient(90deg, #000000, #333333);
             padding: 20px;
-            background-color: #111;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
         }
-        .logo {
-            max-width: 200px;
+        .owner {
+            font-size: 22px;
+            font-weight: bold;
+            color: gold;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?city,neon,cyberpunk') no-repeat center center/cover;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 70px;
+            font-weight: bold;
+            text-shadow: 4px 4px 20px rgba(0, 255, 255, 0.9);
+            animation: neonGlow 1.5s infinite alternate;
+        }
+        @keyframes neonGlow {
+            from { text-shadow: 4px 4px 20px rgba(0, 255, 255, 0.9); }
+            to { text-shadow: 6px 6px 30px rgba(0, 255, 255, 1); }
         }
         .section {
-            padding: 40px 20px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 30px auto;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 80%;
         }
-        .btn {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        .button {
+            background: linear-gradient(90deg, #00ffff, #0077ff);
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+        .creator {
+            font-size: 22px;
+            font-weight: bold;
+            color: gold;
+            margin-top: 20px;
+            text-shadow: 2px 2px red;
+        }
+        .players {
+            margin-top: 40px;
+            font-size: 18px;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.gif" alt="City Lords Logo" class="logo">
-        <h1>Welcome to City Lords</h1>
+        <div>City Lords</div>
+        <div class="owner">🅒🅛 RUSS - CEO</div>
     </header>
-    <section class="section">
-        <h2>About Us</h2>
-        <p>City Lords is built on loyalty, strength, and respect. We dominate the streets with unity and power, making our mark wherever we go.</p>
-        <a href="#learn-more" class="btn">Learn More</a>
-    </section>
-    <section id="learn-more" class="section">
-        <h2>Learn More</h2>
-        <p>We move together, grow together, and rise above any challenge. Whether it's business, protection, or making a statement, we run the city with unmatched energy and strategy.</p>
-    </section>
-    <section class="section">
-        <h2>Join Us on Discord</h2>
-        <p>Connect with us and be part of the movement.</p>
-        <a href="https://discord.gg/Wa6hbpJP" class="btn" target="_blank">Join Our Discord</a>
-    </section>
+    
+    <div class="hero">
+        <h1>City Lords Gang</h1>
+        <p>Controlling the streets with honor and respect.</p>
+    </div>
+    
+    <div class="section contact">
+        <h2>Contact Us</h2>
+        <p>If you want to be part of this gang, join our Discord and talk to us.</p>
+        <button class="button" onclick="window.location.href='https://discord.gg/yWzrVfSGJc'">Join Discord</button>
+    </div>
+    
+    <div class="section gang-info">
+        <h2>About City Lords</h2>
+        <p>City Lords is a powerful gang that dominates the streets through strategic alliances, discipline, and a strong code of honor. Inspired by the historical gangs of London, City Lords controls its territory with absolute authority. Our members are known for their unwavering loyalty and tactical intelligence, ensuring our continued dominance in the urban underworld.</p>
+    </div>
+    
+    <div class="section rules">
+        <h2>Gang Rules</h2>
+        <ul>
+            <li>No posting links</li>
+            <li>No inappropriate chat or images</li>
+            <li>Insulting anyone = Ban</li>
+            <li>No hacking</li>
+            <li>No excessive spamming</li>
+            <li>Soundpad usage = Mute</li>
+            <li>No voice changers</li>
+            <li>Report any disrespect to admins</li>
+            <li>No political discussions</li>
+            <li>Leaving and rejoining = Ban</li>
+        </ul>
+    </div>
+    
+    <div class="creator">Made by 🅒🅛 𝐌𝐚𝐦𝐒𝐡𝐚𝐳𝐚𝐝</div>
 </body>
 </html>
