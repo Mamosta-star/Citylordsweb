@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Lords</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #111;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.gif" alt="City Lords Logo" class="logo">
+        <h1>Welcome to City Lords</h1>
+    </header>
+    <section class="section">
+        <h2>About Us</h2>
+        <p>City Lords is built on loyalty, strength, and respect. We dominate the streets with unity and power, making our mark wherever we go.</p>
+        <a href="#learn-more" class="btn">Learn More</a>
+    </section>
+    <section id="learn-more" class="section">
+        <h2>Learn More</h2>
+        <p>We move together, grow together, and rise above any challenge. Whether it's business, protection, or making a statement, we run the city with unmatched energy and strategy.</p>
+    </section>
+    <section class="section">
+        <h2>Contact Us</h2>
+        <p>Follow us on social media and join the movement.</p>
+    </section>
+</body>
+</html>
